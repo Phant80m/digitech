@@ -1,0 +1,151 @@
+/* CSS HSL */
+:root {
+  --rich-black: #11151cff;
+  --prussian-blue: #212d40ff;
+  --charcoal: #364156ff;
+  --rose-taupe: #7d4e57ff;
+  --jasper: #d66853ff;
+}
+
+body {
+  background-image: url("/assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 100vh;
+}
+body::after {
+  content: "";
+  background-image: url("/assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(25px);
+  -webkit-filter: blur(25px); /* For Safari support */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+h1 {
+	font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
+  text-decoration: underline;
+  color: var(--jasper);
+}
+.container {
+  opacity: 0; /* Start with an opacity of 0 to hide the box */
+  transform: scale(0.5); /* Scale the box down to half its size */
+  transition: all 0.5s ease-in-out; /* Use a transition for the pop-in effect */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: var(--rich-black);
+  border-radius: 10px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+.container.show {
+    opacity: 1; /* Change opacity to 1 to show the box */
+  }
+.button {
+	font-family: 'Comfortaa';
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: var(--charcoal);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.button i {
+  margin-left: 5px; /* Adjust the spacing between the icon and text as needed */
+}
+.button:hover {
+  transform: scale(1.2);
+}
+
+.button:hover {
+  background-color: var(--jasper);
+}
+
+.made-by {
+	font-family: 'Comfortaa';
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background-color: var(--rich-black);
+  border-radius: 10px;
+  color: #fff;
+  padding: 16px;
+}
+
+@media only screen {
+  html,
+body {
+    background: #222;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+  	font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    background: -webkit-linear-gradient(left, #ed8796, #ee99a0, #f5a97f, #f5a97f, #ed8796);
+    background: linear-gradient(left, #ed8796, #ee99a0, #f5a97f, #f5a97f, #ed8796);
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-animation: animate-logo;
+    -webkit-animation-delay: 0;
+    -webkit-animation-duration: 7s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: forwards;
+    transition: font-size 500ms ease-in-out;
+  }
+}
+@media only screen and (min-width:40.063em) {
+  .logo {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width:64.063em) {
+  .logo {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width:90.063em) {
+  .logo {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width:120.063em) {
+  .logo {
+    font-size: 2.5rem;
+  }
+}
+@-webkit-keyframes animate-logo {
+  0% {
+    background-position: 0 3200px;
+  }
+  100% {
+    background-position: 3200px 0;
+  }
+}

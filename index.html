@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Home Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+  <link rel="stylesheet" href="/assets/all.min.css">
+  <link rel="stylesheet" href="/style/index.css">
+</head>
+<body onload="showBox();">
+<div class="parent-container">
+  <div class="container">
+  
+    <h1 class="logo">Welcome to the Cybersecurity Home Page</h1>
+    
+    <a class="button" href="digital_footprints.html">
+    <span>Digital Footprints</span>
+    <i class="fa-solid fa-shoe-prints"></i>
+    </a>
+    
+    <a class="button" href="online_profiles.html">
+    <span>Online Profiles</span>
+    <i class="fa-sharp fa-solid fa-earth-americas"></i>
+    </a>
+    
+    <a class="button" href="trojans.html">
+    <span>Trojans</span>
+    <i class="fa-solid fa-virus"></i>
+    </a>
+    
+    <a class="button" href="phishing.html">
+    <span>Phishing</span>
+    <i class="fas fa-fish"></i>
+    </a>
+    
+    <a class="button" href="malvertising.html">
+    <span>Malvertising</span>
+    <i class="fas fa-at"></i>
+    </a>
+    
+    <a class="button" href="ransomware.html">
+    <span>Ransomeware</span>
+    <i class="fas fa-money-check-alt"></i>
+    </a>
+    
+    <a class="button" href="botnets.html">
+    <span>Botnets</span>
+    <i class="fas fa-robot"></i>
+    </a>
+  </div>
+</div>
+<div class="made-by">Made by Andrew and Zayd</div>
+
+<script>
+        function showBox() {
+          const box = document.querySelector('.container');
+          setTimeout(() => {
+            box.classList.add('show');
+          }, 600); // Add the show class after a delay of 1 secon
+        }
+</script>
+</body>
+</html>
